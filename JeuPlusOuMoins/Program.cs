@@ -6,7 +6,50 @@ namespace JeuPlusOuMoins
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Random rand = new Random();
+            int maxValue = 101;
+
+            int numberToBeFound = rand.Next(maxValue);
+
+            bool over = false;
+
+            Console.WriteLine("Welcome to the Plus or minus game!");
+            Console.WriteLine("Please enter a number and try to find the secret number (between 0 and 100)");
+
+            while (!over)
+            {
+                string input = Console.ReadLine();
+
+                int inputToNumber;
+
+                if (int.TryParse(input, out inputToNumber))
+                {
+                    if (inputToNumber < 0 || inputToNumber > 100)
+                    {
+                        Console.WriteLine("Please enter an integer between 0 and 100");
+                    }
+                    else if (inputToNumber == numberToBeFound)
+                    {
+                        Console.WriteLine("Success !");
+                        Console.WriteLine("Number to be found : " + numberToBeFound);
+                        Console.WriteLine("Your number : " + inputToNumber);
+                        over = true;
+                    }
+                    else if (inputToNumber < numberToBeFound)
+                    {
+                        Console.WriteLine("Try a higher number");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Try a lower number");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Please, only enter an integer");
+                }
+            }
+
             Console.Read();
         }
     }
