@@ -7,6 +7,7 @@ namespace JeuPlusOuMoins
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.Read();
         }
     }
 }
