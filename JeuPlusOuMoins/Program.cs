@@ -51,8 +51,6 @@ namespace JeuPlusOuMoins
                 }
                 else
                 {
-                    numberOfTries++;
-
                     Console.WriteLine("Please, only enter an integer");
                 }
             }
