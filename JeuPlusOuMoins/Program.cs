@@ -37,7 +37,7 @@ namespace JeuPlusOuMoins
                         Console.WriteLine("Success !");
                         Console.WriteLine("Number to be found : " + numberToBeFound);
                         Console.WriteLine("Your number : " + inputToNumber);
-                        Console.WriteLine("Tries needed : {0}", numberOfTries);
+                        Console.WriteLine("Attempts needed : {0}", numberOfTries);
                         over = true;
                     }
                     else if (inputToNumber < numberToBeFound)
